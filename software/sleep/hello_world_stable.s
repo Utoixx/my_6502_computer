@@ -73,7 +73,7 @@ irq:
 	pha
 	tya
 	pha
-	bit VIA_T1CL		;reset the timer1 interupt flag
+	lda VIA_T1CL		;reset the timer1 interupt flag
 	inc ticks
 	bne irq_end
 	inc ticks + 1
